@@ -1,0 +1,17 @@
+[project]
+name = "denylist"
+version = "0.1.0"
+description = "A plugin for detecting deny words in MCP Gateway prompts"
+readme = "README.md"
+authors = [
+    { name = "Frederico Araujo", email = "frederico.araujo@ibm.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+denylist = "denylist:main"
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
