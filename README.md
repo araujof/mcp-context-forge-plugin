@@ -1,7 +1,5 @@
 # Denylist Filter Plugin for MCP Gateway
 
-> Author: Fred Araujo
-
 A plugin for detecting deny words in MCP Gateway prompts.
 
 ## Features
@@ -17,7 +15,7 @@ Detects any deny word in the prompt. If a match is found, rejects the prompt req
 ```yaml
 plugins:
   - name: "DenyListPlugin"
-    kind: "plugins.filter.deny.DenyListPlugin"
+    kind: "denylist.deny.DenyListPlugin" # adjust it to the package install path
     description: "A plugin that implements a deny list filter."
     version: "0.1"
     author: "MCP Context Forge Team"
@@ -39,10 +37,10 @@ plugins:
 
 ## Testing
 
-### Run Individual Tests
+### Run Unit Tests
 ```bash
-# Test only the plugin
-pytest tests/unit/mcpgateway/plugins/framework/test_manager.py::test_manager_filter_plugins -v
+# Test the plugin
+pytest tests/unit/test_deny.py -v
 ```
 
 ### Manual Testing with the Gateway
