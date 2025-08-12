@@ -7,7 +7,11 @@ authors = [
     { name = "Frederico Araujo", email = "frederico.araujo@ibm.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "chuk-mcp-runtime>=0.6.5",
+    "chuk-mcp[full]>=0.5.1",
+    "mcp-contextforge-gateway",
+]
 
 [project.scripts]
 denylist = "denylist:main"
@@ -15,3 +19,6 @@ denylist = "denylist:main"
 [build-system]
 requires = ["uv_build>=0.8.4,<0.9.0"]
 build-backend = "uv_build"
+
+[tool.uv.sources]
+mcp-contextforge-gateway = { git = "https://github.com/IBM/mcp-context-forge.git", rev = "main" }

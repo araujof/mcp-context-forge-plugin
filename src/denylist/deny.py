@@ -15,8 +15,7 @@ from pydantic import BaseModel
 
 # First-Party
 from mcpgateway.plugins.framework.base import Plugin
-from mcpgateway.plugins.framework.models import PluginConfig, PluginViolation
-from mcpgateway.plugins.framework.plugin_types import PluginContext, PromptPrehookPayload, PromptPrehookResult
+from mcpgateway.plugins.framework.models import PluginConfig, PluginContext, PluginViolation, PromptPrehookPayload, PromptPrehookResult
 
 logger = logging.getLogger(__name__)
 
